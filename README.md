@@ -6,4 +6,4 @@ This lab displays a map of the city of Calgary, along with the building permits 
 This map should be able to search for building permits by issue dates, or by a range of issue dates.
 As well, users can identify building permits through the use of a pop up, which displays information about the building permit in the clicked on area.
 The pop up should display the issue date, the work class group, the contractor name, the community name, and the original address. 
-For a link to the youtube video showing the code and website, click here:.
+For a link to the youtube video showing the code and website, click here: https://youtu.be/SkAEn5nf0ok
