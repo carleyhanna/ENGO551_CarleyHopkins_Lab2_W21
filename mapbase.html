@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>City of Calgary Building Permits</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel = "stylesheet" href = "webpagestyle.css">
+</head>
+<body>
+<div class="navbar"></div>
+<script src = "building_permits.js"></script>
+
+    <div class="topnav">
+        <input type="text" placeholder="Search...">
+    </div>
+
+<div id="mapid" style="width: 1887px; height: 800px;"></div>
+<script src="geojson_endpoint.js" type = "text/javascript"></script>
+<script src="building_permits.js" type = "text/javascript"></script>
+
+<div class = "rowCon">
+	<div class = "sideCol">
+		<br>
+		<h3 style = "text-align: center;"> Search for building permits within specified dates. </h3>
+		<hr>
+
+		<p> Pick between two dates: </p>
+		<input type = "text" name = "dates" value = "input a date range"/>
+		<hr>
+		<p> Choose a date: </p>
+		<input type = "text" name = "single_date" value = "03/02/2021"/>
+
+  </div>
+<script>
+function onMapClick(feature, properties) {
+popup
+	.setContent("<p>Issued Date: <p>" + feature.properties.issueddate + "<br>" + "<p>Community Name: <p>" + feature.properties.communityname + "<br>" + "<p>Work Class Group: <p>" + feature.properties.workclassgroup + "<p>Contractor Name: <p>" + feature.properties.contractorname + "<br>" + "<p>Original Address: <p>" + feature.properties.originaladdress)
+	.openOn(mymap);
+	}
+	mymap.on('click',onMapClick);
+}
+
+</script>
+
+</body>
+</html>
