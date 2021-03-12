@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>2017 Traffic Data</title>
+
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+
+<link rel="stylesheet" href="lab3stylesheet.css">
+<style>
+body { margin: 1000; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; right: 0; left: 1050; width: 50%; }
+</style>
+</head>
+<body>
+ 
+<div id="map" style="width: 1450px; height: 800px;"></div>
+
+<! Link to toggle between pages>
+<div id="footer">
+	<a href="mapbase.html">|Toggle: Base Map |</a>
+</div>
+
+
+<! Legend> 
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <br/>
+        <h4>Calgary 2017 Traffic Incidents Visualizer</h4>
+        
+        <p><b>Map Legend:</b></p>
+        <table class="table">
+          <tr>
+            <th colspan="2">Color</th>
+            <th>Value</th>
+          </tr>
+          <tr>
+            <td>Red</td>
+            <td><div class="circle" style="background-color:red"></div></td>
+            <td>Incidents Involving Greater than 2 Vehicles</td>
+          </tr>
+          <tr>
+            <td>Orange</td>
+            <td><div class="circle" style="background-color:orange"></div></td>
+            <td>Incidents Involving Two Vehicles</td>
+          </tr>
+          <tr>
+            <td>Yellow</td>
+            <td><div class="circle" style="background-color:yellow"></div></td>
+            <td>Incidents Involving One Vehicle</td>
+          </tr>
+          <tr>
+            <td>Green</td>
+            <td><div class="circle" style="background-color:green"></div></td>
+            <td>Stalled Vehicles</td>
+          </tr>
+          <tr>
+            <td>Blue</td>
+            <td><div class="circle" style="background-color:blue"></div></td>
+            <td>Traffic Signal Issues</td>
+          </tr>
+          <tr>
+            <td>Purple</td>
+            <td><div class="circle" style="background-color:purple"></div></td>
+            <td>Other</td>
+          </tr>
+        </table>
+        <br/>
+
+      </div>
+      <div class="col-md-9">
+        <div id="leafletMap"></div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+  crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+  <! Link to JS>
+  <script type="text/javascript "src="Lab3_Map.js"></script>
+
+</body>
+</html>
