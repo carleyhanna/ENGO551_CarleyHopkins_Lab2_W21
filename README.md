@@ -20,18 +20,19 @@ Open mapbase.html to your preferred browser.
 
 PROJECT FILES
 (LAB 3 SPECIFIC)
-mapbase.html
+
+mapbase.html:
 This is the map created in Lab 2, and used as a basemap in Lab 3. The only addition has been minor cosmetic editing, and the toggle.
 This toggle is in the upper left hand corner.
 
-Lab3.html
+Lab3.html:
 This is the page that displays the mapbox created map layer of the City of Calgary 2017 traffic incident data, along with the legend for the data, and the toggle.
 This toggle is in the upper left hand corner.
 
-Lab3_Map.js
+Lab3_Map.js:
 This is the page that brings together the mapbox style created with the leaflet map. 
 
-webpagestyle.css
+webpagestyle.css:
 This page styles cosmetics in the legend on the traffic data layer.
 
 For a link to the Lab 3 youtube video showing the code and website, click here: https://youtu.be/F7hRmj0UQsI
