@@ -34,4 +34,4 @@ This is the page that brings together the mapbox style created with the leaflet 
 webpagestyle.css
 This page styles cosmetics in the legend on the traffic data layer.
 
-For a link to the youtube video showing the code and website, click here: https://youtu.be/F7hRmj0UQsI
+For a link to the Lab 3 youtube video showing the code and website, click here: https://youtu.be/F7hRmj0UQsI
